@@ -88,7 +88,7 @@ def api_delete_student(request,student_id):
     student.delete()
     return Response('Student deleted')
 
-def login(request):
+def loginToAPP(request):
     if request.user.is_authenticated:
         return redirect('home')
     else:
@@ -105,15 +105,15 @@ def login(request):
                 
             else:
                 messages.info(request, 'User name or password is incorrect')
-        return render(request, 'app1/login.html')
+        return render(request, 'djapp/login.html')
 
-def signout(request):
+def signoutFromAPP(request):
     logout(request)
     return redirect('login')
 
 
 
-def signup(request):
+def signupToAPP(request):
     if request.user.is_authenticated:
         return redirect('home')
     else:
@@ -129,7 +129,7 @@ def signup(request):
 
 
         context = {'signup_form': signup_form}
-        return render(request, 'app1/signup.html', context)
+        return render(request, 'djapp/signup.html', context)
     
 
 

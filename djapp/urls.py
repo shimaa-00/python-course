@@ -14,8 +14,8 @@ urlpatterns = [
     path('api-add', views.api_add_student ,name='api-add'),
     path('api-edit/<student_id>', views.api_edit_student ,name='api-edit'),
     path('api-delete/<student_id>', views.api_delete_student ,name='api-delete'),
-    path('login',views.login , name='login'),
-    path('signup',views.signup , name='signup'),
-    path('signout',views.signout , name='signout')
+    path('login',views.loginToAPP , name='login'),
+    path('signup',views.signupToAPP , name='signup'),
+    path('signout',views.signoutFromAPP , name='signout')
 
 ]
